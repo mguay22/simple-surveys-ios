@@ -23,12 +23,34 @@ class LoginViewController: UIViewController {
     @IBOutlet var username : UITextField!
     @IBOutlet var password : UITextField!
     
+    //Button Outlets
+    @IBOutlet var loginButton : UIButton!
+    @IBOutlet var registerButton : UIButton!
+    
     //Buttons
     @IBAction func LoginRequest(_ sender: UIButton) {
+        if (isValidLogin(u: username.text, p: password.text)) {
+            loginButton.setTitle("Logged In", for: .normal)
+        }
         
     }
     @IBAction func SignUpRequest(_ sender : UIButton) {
         
+    }
+    
+    func isValidLogin(u : String?, p : String?) -> Bool {
+        //Login request from server
+        
+        if (u != "" && u != nil) {
+            //Check if username is is DB
+            if (p != "" && p != nil) {
+                //hash the password with correct function
+                //Check if the hashed password matches the DB username
+                return true
+            }
+            return false
+        }
+        return false
     }
 }
 
