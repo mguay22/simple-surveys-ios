@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		223D155E2404673F00745268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D155D2404673F00745268 /* AppDelegate.swift */; };
 		223D15602404673F00745268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D155F2404673F00745268 /* SceneDelegate.swift */; };
-		223D15622404673F00745268 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D15612404673F00745268 /* ViewController.swift */; };
+		223D15622404673F00745268 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D15612404673F00745268 /* HomeController.swift */; };
 		223D15652404673F00745268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223D15632404673F00745268 /* Main.storyboard */; };
 		223D15672404674100745268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D15662404674100745268 /* Assets.xcassets */; };
 		223D156A2404674100745268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223D15682404674100745268 /* LaunchScreen.storyboard */; };
 		223D15752404674100745268 /* Simple_SurveysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D15742404674100745268 /* Simple_SurveysTests.swift */; };
 		223D15802404674100745268 /* Simple_SurveysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D157F2404674100745268 /* Simple_SurveysUITests.swift */; };
+		22E4055924057A0100051A9B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4055824057A0100051A9B /* NotificationService.swift */; };
+		22E4055D24057A0100051A9B /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22E4055624057A0100051A9B /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3F2E40F6EC90653B45D3F028 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05997AA016307CDF2043CCFB /* Pods_OneSignalNotificationServiceExtension.framework */; };
+		43D8697F246D5B792FB3FD25 /* Pods_Simple_SurveysTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5155926799632080E3AF9D93 /* Pods_Simple_SurveysTests.framework */; };
+		C2D3592E4ABEF6F41C8536AF /* Pods_Simple_Surveys_Simple_SurveysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE74FCF6A7C84B0E1FA426A /* Pods_Simple_Surveys_Simple_SurveysUITests.framework */; };
+		E9D67271AA98E1B5115AB979 /* Pods_Simple_Surveys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0C4D4AC3934FD44EF182FF /* Pods_Simple_Surveys.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,13 +38,37 @@
 			remoteGlobalIDString = 223D15592404673F00745268;
 			remoteInfo = "Simple Surveys";
 		};
+		22E4055B24057A0100051A9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223D15522404673F00745268 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22E4055524057A0100051A9B;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		22E4055E24057A0100051A9B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				22E4055D24057A0100051A9B /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		05997AA016307CDF2043CCFB /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC0640F5939954881734418 /* Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig"; path = "Target Support Files/Pods-Simple Surveys-Simple SurveysUITests/Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		22095E45241FC9BC00BA0B32 /* Simple Surveys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Simple Surveys.entitlements"; sourceTree = "<group>"; };
 		223D155A2404673F00745268 /* Simple Surveys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Surveys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D155D2404673F00745268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223D155F2404673F00745268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		223D15612404673F00745268 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		223D15612404673F00745268 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		223D15642404673F00745268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		223D15662404674100745268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		223D15692404674100745268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +79,19 @@
 		223D157B2404674100745268 /* Simple SurveysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple SurveysUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D157F2404674100745268 /* Simple_SurveysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_SurveysUITests.swift; sourceTree = "<group>"; };
 		223D15812404674100745268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22E4055624057A0100051A9B /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E4055824057A0100051A9B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		22E4055A24057A0100051A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40B41A590E68CDA4F9D63C44 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		5155926799632080E3AF9D93 /* Pods_Simple_SurveysTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_SurveysTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E7631C2AF6605A998AF47C /* Pods-Simple SurveysTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple SurveysTests.release.xcconfig"; path = "Target Support Files/Pods-Simple SurveysTests/Pods-Simple SurveysTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F175C4915B5663EF8376527 /* Pods-Simple Surveys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Surveys.release.xcconfig"; path = "Target Support Files/Pods-Simple Surveys/Pods-Simple Surveys.release.xcconfig"; sourceTree = "<group>"; };
+		AAE74FCF6A7C84B0E1FA426A /* Pods_Simple_Surveys_Simple_SurveysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Surveys_Simple_SurveysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D661E617C4E619AC3D11E918 /* Pods-Simple Surveys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Surveys.debug.xcconfig"; path = "Target Support Files/Pods-Simple Surveys/Pods-Simple Surveys.debug.xcconfig"; sourceTree = "<group>"; };
+		DE0C4D4AC3934FD44EF182FF /* Pods_Simple_Surveys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Surveys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E308D360E1F5EFB3C54FAF83 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		E32BA51A4E0846DE3A1539C2 /* Pods-Simple Surveys-Simple SurveysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Surveys-Simple SurveysUITests.release.xcconfig"; path = "Target Support Files/Pods-Simple Surveys-Simple SurveysUITests/Pods-Simple Surveys-Simple SurveysUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EDD16A65F60F2E63312A2B3A /* Pods-Simple SurveysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple SurveysTests.debug.xcconfig"; path = "Target Support Files/Pods-Simple SurveysTests/Pods-Simple SurveysTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D67271AA98E1B5115AB979 /* Pods_Simple_Surveys.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D8697F246D5B792FB3FD25 /* Pods_Simple_SurveysTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +115,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D3592E4ABEF6F41C8536AF /* Pods_Simple_Surveys_Simple_SurveysUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22E4055324057A0100051A9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2E40F6EC90653B45D3F028 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +136,10 @@
 				223D155C2404673F00745268 /* Simple Surveys */,
 				223D15732404674100745268 /* Simple SurveysTests */,
 				223D157E2404674100745268 /* Simple SurveysUITests */,
+				22E4055724057A0100051A9B /* OneSignalNotificationServiceExtension */,
 				223D155B2404673F00745268 /* Products */,
+				4919BC37E2FEA60FDE4EE747 /* Pods */,
+				A9E98EEC3C9DFCA44DA37497 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +149,7 @@
 				223D155A2404673F00745268 /* Simple Surveys.app */,
 				223D15702404674100745268 /* Simple SurveysTests.xctest */,
 				223D157B2404674100745268 /* Simple SurveysUITests.xctest */,
+				22E4055624057A0100051A9B /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +157,10 @@
 		223D155C2404673F00745268 /* Simple Surveys */ = {
 			isa = PBXGroup;
 			children = (
+				22095E45241FC9BC00BA0B32 /* Simple Surveys.entitlements */,
 				223D155D2404673F00745268 /* AppDelegate.swift */,
 				223D155F2404673F00745268 /* SceneDelegate.swift */,
-				223D15612404673F00745268 /* ViewController.swift */,
+				223D15612404673F00745268 /* HomeController.swift */,
 				223D15632404673F00745268 /* Main.storyboard */,
 				223D15662404674100745268 /* Assets.xcassets */,
 				223D15682404674100745268 /* LaunchScreen.storyboard */,
@@ -128,6 +187,41 @@
 			path = "Simple SurveysUITests";
 			sourceTree = "<group>";
 		};
+		22E4055724057A0100051A9B /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				22E4055824057A0100051A9B /* NotificationService.swift */,
+				22E4055A24057A0100051A9B /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		4919BC37E2FEA60FDE4EE747 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E308D360E1F5EFB3C54FAF83 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				40B41A590E68CDA4F9D63C44 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				D661E617C4E619AC3D11E918 /* Pods-Simple Surveys.debug.xcconfig */,
+				9F175C4915B5663EF8376527 /* Pods-Simple Surveys.release.xcconfig */,
+				1DC0640F5939954881734418 /* Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig */,
+				E32BA51A4E0846DE3A1539C2 /* Pods-Simple Surveys-Simple SurveysUITests.release.xcconfig */,
+				EDD16A65F60F2E63312A2B3A /* Pods-Simple SurveysTests.debug.xcconfig */,
+				61E7631C2AF6605A998AF47C /* Pods-Simple SurveysTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A9E98EEC3C9DFCA44DA37497 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05997AA016307CDF2043CCFB /* Pods_OneSignalNotificationServiceExtension.framework */,
+				DE0C4D4AC3934FD44EF182FF /* Pods_Simple_Surveys.framework */,
+				AAE74FCF6A7C84B0E1FA426A /* Pods_Simple_Surveys_Simple_SurveysUITests.framework */,
+				5155926799632080E3AF9D93 /* Pods_Simple_SurveysTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,13 +229,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 223D15842404674100745268 /* Build configuration list for PBXNativeTarget "Simple Surveys" */;
 			buildPhases = (
+				47E9B8AE2FFF2D2C33D7D2C5 /* [CP] Check Pods Manifest.lock */,
 				223D15562404673F00745268 /* Sources */,
 				223D15572404673F00745268 /* Frameworks */,
 				223D15582404673F00745268 /* Resources */,
+				22E4055E24057A0100051A9B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				22E4055C24057A0100051A9B /* PBXTargetDependency */,
 			);
 			name = "Simple Surveys";
 			productName = "Simple Surveys";
@@ -152,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 223D15872404674100745268 /* Build configuration list for PBXNativeTarget "Simple SurveysTests" */;
 			buildPhases = (
+				6CEBF4382B5999B97C25573D /* [CP] Check Pods Manifest.lock */,
 				223D156C2404674100745268 /* Sources */,
 				223D156D2404674100745268 /* Frameworks */,
 				223D156E2404674100745268 /* Resources */,
@@ -170,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 223D158A2404674100745268 /* Build configuration list for PBXNativeTarget "Simple SurveysUITests" */;
 			buildPhases = (
+				FBC218650F26DAC9F9997828 /* [CP] Check Pods Manifest.lock */,
 				223D15772404674100745268 /* Sources */,
 				223D15782404674100745268 /* Frameworks */,
 				223D15792404674100745268 /* Resources */,
@@ -183,6 +282,24 @@
 			productName = "Simple SurveysUITests";
 			productReference = 223D157B2404674100745268 /* Simple SurveysUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		22E4055524057A0100051A9B /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22E4056124057A0100051A9B /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				336143F5215C72396573F2A0 /* [CP] Check Pods Manifest.lock */,
+				22E4055224057A0100051A9B /* Sources */,
+				22E4055324057A0100051A9B /* Frameworks */,
+				22E4055424057A0100051A9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 22E4055624057A0100051A9B /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -205,6 +322,9 @@
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = 223D15592404673F00745268;
 					};
+					22E4055524057A0100051A9B = {
+						CreatedOnToolsVersion = 11.3;
+					};
 				};
 			};
 			buildConfigurationList = 223D15552404673F00745268 /* Build configuration list for PBXProject "Simple Surveys" */;
@@ -223,6 +343,7 @@
 				223D15592404673F00745268 /* Simple Surveys */,
 				223D156F2404674100745268 /* Simple SurveysTests */,
 				223D157A2404674100745268 /* Simple SurveysUITests */,
+				22E4055524057A0100051A9B /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -252,14 +373,112 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22E4055424057A0100051A9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		336143F5215C72396573F2A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47E9B8AE2FFF2D2C33D7D2C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simple Surveys-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CEBF4382B5999B97C25573D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simple SurveysTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC218650F26DAC9F9997828 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simple Surveys-Simple SurveysUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		223D15562404673F00745268 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223D15622404673F00745268 /* ViewController.swift in Sources */,
+				223D15622404673F00745268 /* HomeController.swift in Sources */,
 				223D155E2404673F00745268 /* AppDelegate.swift in Sources */,
 				223D15602404673F00745268 /* SceneDelegate.swift in Sources */,
 			);
@@ -281,6 +500,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22E4055224057A0100051A9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E4055924057A0100051A9B /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +520,11 @@
 			isa = PBXTargetDependency;
 			target = 223D15592404673F00745268 /* Simple Surveys */;
 			targetProxy = 223D157C2404674100745268 /* PBXContainerItemProxy */;
+		};
+		22E4055C24057A0100051A9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22E4055524057A0100051A9B /* OneSignalNotificationServiceExtension */;
+			targetProxy = 22E4055B24057A0100051A9B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -432,17 +664,22 @@
 		};
 		223D15852404674100745268 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D661E617C4E619AC3D11E918 /* Pods-Simple Surveys.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Simple Surveys/Simple Surveys.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BR5885238L;
+				DEVELOPMENT_TEAM = GFAN58D6MV;
 				INFOPLIST_FILE = "Simple Surveys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cs295.Simple-Surveys";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs295.simplesurveysios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,17 +687,22 @@
 		};
 		223D15862404674100745268 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F175C4915B5663EF8376527 /* Pods-Simple Surveys.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Simple Surveys/Simple Surveys.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BR5885238L;
+				DEVELOPMENT_TEAM = GFAN58D6MV;
 				INFOPLIST_FILE = "Simple Surveys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cs295.Simple-Surveys";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs295.simplesurveysios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +710,7 @@
 		};
 		223D15882404674100745268 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDD16A65F60F2E63312A2B3A /* Pods-Simple SurveysTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +733,7 @@
 		};
 		223D15892404674100745268 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E7631C2AF6605A998AF47C /* Pods-Simple SurveysTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +756,7 @@
 		};
 		223D158B2404674100745268 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DC0640F5939954881734418 /* Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +777,7 @@
 		};
 		223D158C2404674100745268 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E32BA51A4E0846DE3A1539C2 /* Pods-Simple Surveys-Simple SurveysUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +793,52 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Simple Surveys";
+			};
+			name = Release;
+		};
+		22E4055F24057A0100051A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E308D360E1F5EFB3C54FAF83 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GFAN58D6MV;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs295.simplesurveysios.OneSignalNotificationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22E4056024057A0100051A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40B41A590E68CDA4F9D63C44 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GFAN58D6MV;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs295.simplesurveysios.OneSignalNotificationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -585,6 +877,15 @@
 			buildConfigurations = (
 				223D158B2404674100745268 /* Debug */,
 				223D158C2404674100745268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22E4056124057A0100051A9B /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E4055F24057A0100051A9B /* Debug */,
+				22E4056024057A0100051A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

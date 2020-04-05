@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YeS-f0-cCf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Home Controller-->
+        <scene sceneID="GgN-aV-oq8">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="YeS-f0-cCf" customClass="HomeController" customModule="Simple_Surveys" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tmc-qK-31f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Stan Smith!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXR-P1-fFb">
+                                <rect key="frame" x="91.5" y="80" width="231" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Survey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YU-tP-4za">
+                                <rect key="frame" x="104" y="278" width="206" height="37"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
+                                <color key="textColor" red="0.19215686274509802" green="0.42352941176470588" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to do later?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-iM-JAK">
+                                <rect key="frame" x="92.5" y="346" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.47450980390000003" green="0.65490196079999996" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Survey Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F97-oF-2xX">
+                                <rect key="frame" x="57" y="417" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Afb-uO-dH6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udi-Ka-8FE">
+                                <rect key="frame" x="176" y="484" width="62" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="F97-oF-2xX" firstAttribute="centerX" secondItem="Tmc-qK-31f" secondAttribute="centerX" id="3CV-DN-YzP"/>
+                            <constraint firstItem="6YU-tP-4za" firstAttribute="centerX" secondItem="Tmc-qK-31f" secondAttribute="centerX" id="5ak-82-9eD"/>
+                            <constraint firstItem="lXR-P1-fFb" firstAttribute="top" secondItem="HLA-8c-giv" secondAttribute="top" constant="36" id="8F8-VL-iII"/>
+                            <constraint firstItem="3Xc-iM-JAK" firstAttribute="top" secondItem="Tmc-qK-31f" secondAttribute="top" constant="346" id="F6W-oL-FVp"/>
+                            <constraint firstItem="udi-Ka-8FE" firstAttribute="top" secondItem="F97-oF-2xX" secondAttribute="bottom" constant="33" id="T9O-oe-M8v"/>
+                            <constraint firstItem="3Xc-iM-JAK" firstAttribute="top" secondItem="6YU-tP-4za" secondAttribute="bottom" constant="31" id="g4k-JE-8yF"/>
+                            <constraint firstItem="F97-oF-2xX" firstAttribute="top" secondItem="3Xc-iM-JAK" secondAttribute="bottom" constant="50" id="j3m-SK-9rP"/>
+                            <constraint firstItem="udi-Ka-8FE" firstAttribute="centerX" secondItem="Tmc-qK-31f" secondAttribute="centerX" id="kH8-Tc-dwL"/>
+                            <constraint firstItem="3Xc-iM-JAK" firstAttribute="centerX" secondItem="Tmc-qK-31f" secondAttribute="centerX" id="xwj-g9-Ytt"/>
+                            <constraint firstItem="lXR-P1-fFb" firstAttribute="centerX" secondItem="Tmc-qK-31f" secondAttribute="centerX" id="zmf-Np-VeX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HLA-8c-giv"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="l94-dR-hdc" appends="YES" id="uA9-55-iN3"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="answerButtom" destination="udi-Ka-8FE" id="MfX-lF-4xD"/>
+                        <outlet property="answerTextField" destination="F97-oF-2xX" id="N5m-pv-bVY"/>
+                        <outlet property="currentQuestion" destination="3Xc-iM-JAK" id="rFs-Ub-yTW"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZa-tK-JFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="l94-dR-hdc">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="YeS-f0-cCf" id="KqG-hC-tGC"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-457" y="-187"/>
         </scene>
     </scenes>
 </document>
