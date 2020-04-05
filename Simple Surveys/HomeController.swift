@@ -23,6 +23,7 @@ class HomeController: UIViewController {
     }
     
     func handleNewSurvey(_ notification: Any) {
+        
         // Send POST request to backend to get new survey
         // Update currentQuestion and the submit button
     }

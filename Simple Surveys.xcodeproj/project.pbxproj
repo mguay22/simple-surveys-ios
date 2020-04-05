@@ -64,6 +64,7 @@
 /* Begin PBXFileReference section */
 		05997AA016307CDF2043CCFB /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC0640F5939954881734418 /* Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig"; path = "Target Support Files/Pods-Simple Surveys-Simple SurveysUITests/Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		22095E45241FC9BC00BA0B32 /* Simple Surveys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Simple Surveys.entitlements"; sourceTree = "<group>"; };
 		223D155A2404673F00745268 /* Simple Surveys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Surveys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D155D2404673F00745268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223D155F2404673F00745268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		223D155C2404673F00745268 /* Simple Surveys */ = {
 			isa = PBXGroup;
 			children = (
+				22095E45241FC9BC00BA0B32 /* Simple Surveys.entitlements */,
 				223D155D2404673F00745268 /* AppDelegate.swift */,
 				223D155F2404673F00745268 /* SceneDelegate.swift */,
 				223D15612404673F00745268 /* HomeController.swift */,
@@ -666,15 +668,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Simple Surveys/Simple Surveys.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BR5885238L;
+				DEVELOPMENT_TEAM = GFAN58D6MV;
 				INFOPLIST_FILE = "Simple Surveys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cs295.Simple-Surveys";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs295.simplesurveysios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -686,15 +691,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Simple Surveys/Simple Surveys.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BR5885238L;
+				DEVELOPMENT_TEAM = GFAN58D6MV;
 				INFOPLIST_FILE = "Simple Surveys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cs295.Simple-Surveys";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs295.simplesurveysios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -792,8 +800,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E308D360E1F5EFB3C54FAF83 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BR5885238L;
+				DEVELOPMENT_TEAM = GFAN58D6MV;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -801,8 +810,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cs295.Simple-Surveys.OneSignalNotificationServiceExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs295.simplesurveysios.OneSignalNotificationExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -813,8 +823,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40B41A590E68CDA4F9D63C44 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BR5885238L;
+				DEVELOPMENT_TEAM = GFAN58D6MV;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -822,8 +833,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cs295.Simple-Surveys.OneSignalNotificationServiceExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs295.simplesurveysios.OneSignalNotificationExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
