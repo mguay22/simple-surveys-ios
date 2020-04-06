@@ -65,6 +65,10 @@
 		05997AA016307CDF2043CCFB /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC0640F5939954881734418 /* Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig"; path = "Target Support Files/Pods-Simple Surveys-Simple SurveysUITests/Pods-Simple Surveys-Simple SurveysUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		22095E45241FC9BC00BA0B32 /* Simple Surveys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Simple Surveys.entitlements"; sourceTree = "<group>"; };
+		222B0162243B844300D8E664 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		222B0163243B844300D8E664 /* SurveyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepository.swift; sourceTree = "<group>"; };
+		222B0164243B844300D8E664 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		222B0165243B844300D8E664 /* DatabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseClient.swift; sourceTree = "<group>"; };
 		223D155A2404673F00745268 /* Simple Surveys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Surveys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D155D2404673F00745268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223D155F2404673F00745268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		222B0166243B844300D8E664 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				222B0165243B844300D8E664 /* DatabaseClient.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		222B0167243B844300D8E664 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				222B0162243B844300D8E664 /* UserRepository.swift */,
+				222B0163243B844300D8E664 /* SurveyRepository.swift */,
+				222B0164243B844300D8E664 /* Result.swift */,
+				222B0166243B844300D8E664 /* model */,
+			);
+			name = data;
+			path = "/Users/mguay22/Documents/Senior/CS 295/Simple Surveys/Simple Surveys/data";
+			sourceTree = "<absolute>";
+		};
 		223D15512404673F00745268 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +181,7 @@
 		223D155C2404673F00745268 /* Simple Surveys */ = {
 			isa = PBXGroup;
 			children = (
+				222B0167243B844300D8E664 /* data */,
 				22095E45241FC9BC00BA0B32 /* Simple Surveys.entitlements */,
 				223D155D2404673F00745268 /* AppDelegate.swift */,
 				223D155F2404673F00745268 /* SceneDelegate.swift */,

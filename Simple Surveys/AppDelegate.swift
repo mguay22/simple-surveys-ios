@@ -43,6 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handleNotificationReceived: notificationReceivedBlock,
         handleNotificationAction: nil,
         settings: onesignalInitSettings)
+        
+        // TODO (mguay): Send group code
+//        OneSignal.sendTag("groupCode", value: <#T##String!#>)
 
         OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
 
