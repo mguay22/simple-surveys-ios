@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		223D155E2404673F00745268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D155D2404673F00745268 /* AppDelegate.swift */; };
 		223D15602404673F00745268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D155F2404673F00745268 /* SceneDelegate.swift */; };
-		223D15622404673F00745268 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D15612404673F00745268 /* LoginViewController.swift */; };
 		223D15622404673F00745268 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D15612404673F00745268 /* HomeController.swift */; };
 		223D15652404673F00745268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223D15632404673F00745268 /* Main.storyboard */; };
 		223D15672404674100745268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D15662404674100745268 /* Assets.xcassets */; };
 		223D156A2404674100745268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223D15682404674100745268 /* LaunchScreen.storyboard */; };
 		223D15752404674100745268 /* Simple_SurveysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D15742404674100745268 /* Simple_SurveysTests.swift */; };
 		223D15802404674100745268 /* Simple_SurveysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D157F2404674100745268 /* Simple_SurveysUITests.swift */; };
-		326D0029240EE65100429332 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326D0028240EE65100429332 /* RegisterViewController.swift */; };
+		224D8D75243BA07E003C72D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D8D74243BA07E003C72D7 /* LoginViewController.swift */; };
 		22E4055924057A0100051A9B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4055824057A0100051A9B /* NotificationService.swift */; };
 		22E4055D24057A0100051A9B /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22E4055624057A0100051A9B /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		326D0029240EE65100429332 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326D0028240EE65100429332 /* RegisterViewController.swift */; };
 		3F2E40F6EC90653B45D3F028 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05997AA016307CDF2043CCFB /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		43D8697F246D5B792FB3FD25 /* Pods_Simple_SurveysTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5155926799632080E3AF9D93 /* Pods_Simple_SurveysTests.framework */; };
 		C2D3592E4ABEF6F41C8536AF /* Pods_Simple_Surveys_Simple_SurveysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE74FCF6A7C84B0E1FA426A /* Pods_Simple_Surveys_Simple_SurveysUITests.framework */; };
@@ -74,7 +74,6 @@
 		223D155A2404673F00745268 /* Simple Surveys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Surveys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D155D2404673F00745268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223D155F2404673F00745268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		223D15612404673F00745268 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		223D15612404673F00745268 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		223D15642404673F00745268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		223D15662404674100745268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,10 +85,11 @@
 		223D157B2404674100745268 /* Simple SurveysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple SurveysUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D157F2404674100745268 /* Simple_SurveysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_SurveysUITests.swift; sourceTree = "<group>"; };
 		223D15812404674100745268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		326D0028240EE65100429332 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		224D8D74243BA07E003C72D7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		22E4055624057A0100051A9B /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E4055824057A0100051A9B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		22E4055A24057A0100051A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		326D0028240EE65100429332 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		40B41A590E68CDA4F9D63C44 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5155926799632080E3AF9D93 /* Pods_Simple_SurveysTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_SurveysTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E7631C2AF6605A998AF47C /* Pods-Simple SurveysTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple SurveysTests.release.xcconfig"; path = "Target Support Files/Pods-Simple SurveysTests/Pods-Simple SurveysTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,11 +185,11 @@
 		223D155C2404673F00745268 /* Simple Surveys */ = {
 			isa = PBXGroup;
 			children = (
+				224D8D74243BA07E003C72D7 /* LoginViewController.swift */,
 				222B0167243B844300D8E664 /* data */,
 				22095E45241FC9BC00BA0B32 /* Simple Surveys.entitlements */,
 				223D155D2404673F00745268 /* AppDelegate.swift */,
 				223D155F2404673F00745268 /* SceneDelegate.swift */,
-				223D15612404673F00745268 /* LoginViewController.swift */,
 				326D0028240EE65100429332 /* RegisterViewController.swift */,
 				223D15612404673F00745268 /* HomeController.swift */,
 				223D15632404673F00745268 /* Main.storyboard */,
@@ -509,7 +509,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223D15622404673F00745268 /* LoginViewController.swift in Sources */,
+				224D8D75243BA07E003C72D7 /* LoginViewController.swift in Sources */,
+				223D15622404673F00745268 /* HomeController.swift in Sources */,
 				223D15622404673F00745268 /* HomeController.swift in Sources */,
 				223D155E2404673F00745268 /* AppDelegate.swift in Sources */,
 				223D15602404673F00745268 /* SceneDelegate.swift in Sources */,

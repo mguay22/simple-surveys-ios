@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let notificationReceivedBlock: OSHandleNotificationReceivedBlock = { notification in
-            let homeController : HomeController = self.topMostController() as! HomeController
-            homeController.handleNewSurvey(notification!.payload)
+//            let homeController : HomeController = self.topMostController() as! HomeController
+//            homeController.handleNewSurvey(notification!.payload)
         }
         
         //START OneSignal initialization code
