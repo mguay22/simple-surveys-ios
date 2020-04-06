@@ -117,6 +117,10 @@
                         <outlet property="passwordLabel" destination="ren-2q-vus" id="Pxe-dX-peI"/>
                         <outlet property="username" destination="r2l-DH-AuO" id="DpV-zE-0jI"/>
                         <outlet property="usernameLabel" destination="BlL-EW-oT1" id="ml8-Af-wTp"/>
+                    </connections>
+                </viewController>
+            </objects>
+        </scene>
         <!--Home Controller-->
         <scene sceneID="GgN-aV-oq8">
             <objects>
