@@ -7,16 +7,58 @@
 //
 
 import UIKit
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    func topMostController() -> UIViewController? {
+        guard let window = UIApplication.shared.keyWindow, let rootViewController = window.rootViewController else {
+            return nil
+        }
 
+        var topController = rootViewController
 
+        while let newTopController = topController.presentedViewController {
+            topController = newTopController
+        }
+
+        return topController
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let notificationReceivedBlock: OSHandleNotificationReceivedBlock = { notification in
+            let homeController : HomeController = self.topMostController() as! HomeController
+            homeController.handleNewSurvey(notification!.payload)
+        }
+        
+        //START OneSignal initialization code
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+
+        // Replace 'YOUR_APP_ID' with your OneSignal App ID.
+        OneSignal.initWithLaunchOptions(launchOptions,
+        appId: "1c8a45f4-84a3-494c-8cd8-c3f56eb1652f",
+        handleNotificationReceived: notificationReceivedBlock,
+        handleNotificationAction: nil,
+        settings: onesignalInitSettings)
+        
+        // TODO (mguay): Send group code
+//        OneSignal.sendTag("groupCode", value: <#T##String!#>)
+
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+
+        // Recommend moving the below line to prompt for push after informing the user about
+        //   how your app will use them.
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+        print("User accepted notifications: \(accepted)")
+        })
+        //END OneSignal initializataion code
+        
         return true
     }
+    
 
     // MARK: UISceneSession Lifecycle
 
