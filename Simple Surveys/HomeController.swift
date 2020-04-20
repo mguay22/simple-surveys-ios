@@ -13,6 +13,7 @@ class HomeController: UIViewController {
     @IBOutlet var answerTextField: UITextField!
     @IBOutlet var currentQuestion: UILabel!
     @IBOutlet var answerButtom: UIButton!
+    var groupCode: String = ""
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         answerTextField.resignFirstResponder()

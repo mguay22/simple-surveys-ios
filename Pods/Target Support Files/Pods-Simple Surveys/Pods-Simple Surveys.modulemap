@@ -1,6 +1,0 @@
-framework module Pods_Simple_Surveys {
-  umbrella header "Pods-Simple Surveys-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     //Labels
     @IBOutlet var usernameLabel : UILabel!
     @IBOutlet var passwordLabel : UILabel!
+    @IBOutlet var incorrectLoginLabel: UILabel!
     
     //Text Fields
     @IBOutlet var username : UITextField!
@@ -31,6 +32,10 @@ class LoginViewController: UIViewController {
     @IBAction func LoginRequest(_ sender: UIButton) {
         if (isValidLogin(u: username.text, p: password.text)) {
             loginButton.setTitle("Logged In", for: .normal)
+            self.performSegue(withIdentifier: "SegueFromLoginToHome", sender: self)
+            print("Hello")
+        } else {
+            incorrectLoginLabel.text = "Incorrect username and/or password"
         }
         
     }
@@ -46,10 +51,15 @@ class LoginViewController: UIViewController {
             if (p != "" && p != nil) {
                 //hash the password with correct function
                 //Check if the hashed password matches the DB username
+                
+                print("Hello")
+                
                 return true
             }
+            password.text = ""
             return false
         }
+        password.text = ""
         return false
     }
 }
