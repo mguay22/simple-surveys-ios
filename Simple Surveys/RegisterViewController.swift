@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet var usernameLabel : UILabel!
     @IBOutlet var emailLabel : UILabel!
     @IBOutlet var passwordLabel : UILabel!
+    @IBOutlet var invalidUsernameLabel: UILabel!
     
     //Text Fields
     @IBOutlet var usernameField : UITextField!
@@ -35,12 +36,15 @@ class RegisterViewController: UIViewController {
     
     
     
-    
     @IBAction func signUpRequest(_ sender: Any) {
         if(signUpValid(u : usernameField.text, e : emailField.text, p: passwordField.text)) {
             //Sign user up
             //Send email verification
             signUpButton.setTitle("Signed Up", for: .normal)
+            self.performSegue(withIdentifier: "SegueFromRegisterToHome", sender: self)
+        } else {
+            usernameField.text = ""
+            invalidUsernameLabel.text = "Username taken. Please select another."
         }
     }
     
