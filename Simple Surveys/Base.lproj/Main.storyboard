@@ -157,7 +157,7 @@
                                 <color key="textColor" red="0.19215686274509802" green="0.42352941176470588" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to do later?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-iM-JAK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to do later?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-iM-JAK">
                                 <rect key="frame" x="92.5" y="346" width="229" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.47450980390000003" green="0.65490196079999996" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,6 +175,9 @@
                                 <rect key="frame" x="176" y="484" width="62" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitSurvey:" destination="YeS-f0-cCf" eventType="touchUpInside" id="ZeM-FG-Qoq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -201,6 +204,7 @@
                         <outlet property="answerButtom" destination="udi-Ka-8FE" id="MfX-lF-4xD"/>
                         <outlet property="answerTextField" destination="F97-oF-2xX" id="N5m-pv-bVY"/>
                         <outlet property="currentQuestion" destination="3Xc-iM-JAK" id="rFs-Ub-yTW"/>
+                        <outlet property="currentSurvey" destination="6YU-tP-4za" id="LZy-K1-OoL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZa-tK-JFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

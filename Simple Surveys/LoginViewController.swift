@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         if (isValidLogin(u: username.text, p: password.text)) {
             loginButton.setTitle("Logged In", for: .normal)
             self.performSegue(withIdentifier: "SegueFromLoginToHome", sender: self)
-            print("Hello")
+            
         } else {
             incorrectLoginLabel.text = "Incorrect username and/or password"
         }
@@ -51,8 +51,7 @@ class LoginViewController: UIViewController {
             if (p != "" && p != nil) {
                 //hash the password with correct function
                 //Check if the hashed password matches the DB username
-                
-                print("Hello")
+            
                 
                 return true
             }
