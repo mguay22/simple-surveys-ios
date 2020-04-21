@@ -13,7 +13,7 @@ class SurveyRepository {
     
     var mDatabaseClient : DatabaseClient?
     
-    func SurveyRepository(){
+    init(){
         
         let constant : Constants = Constants()
         //var mDatabaseClient : DatabaseClient = DatabaseClient(url : Constants.API_URL)

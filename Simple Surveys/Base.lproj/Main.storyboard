@@ -39,6 +39,7 @@
                                 </state>
                                 <connections>
                                     <action selector="LoginRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5um-Ek-Y6T"/>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F7g-Ut-6gN"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r2l-DH-AuO">

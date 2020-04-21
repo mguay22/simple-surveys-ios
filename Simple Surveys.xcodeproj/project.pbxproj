@@ -16,6 +16,11 @@
 		223D15752404674100745268 /* Simple_SurveysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D15742404674100745268 /* Simple_SurveysTests.swift */; };
 		223D15802404674100745268 /* Simple_SurveysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D157F2404674100745268 /* Simple_SurveysUITests.swift */; };
 		224D8D75243BA07E003C72D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D8D74243BA07E003C72D7 /* LoginViewController.swift */; };
+		2283F8CB244F97DB001AAB34 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2283F8CA244F97DB001AAB34 /* Constants.swift */; };
+		2283F8CC244F997B001AAB34 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B0162243B844300D8E664 /* UserRepository.swift */; };
+		2283F8CD244F997B001AAB34 /* SurveyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B0163243B844300D8E664 /* SurveyRepository.swift */; };
+		2283F8CE244F997B001AAB34 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B0164243B844300D8E664 /* Result.swift */; };
+		2283F8CF244F997B001AAB34 /* DatabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B0165243B844300D8E664 /* DatabaseClient.swift */; };
 		326D0029240EE65100429332 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326D0028240EE65100429332 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +75,7 @@
 		223D157F2404674100745268 /* Simple_SurveysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_SurveysUITests.swift; sourceTree = "<group>"; };
 		223D15812404674100745268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224D8D74243BA07E003C72D7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2283F8CA244F97DB001AAB34 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		326D0028240EE65100429332 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				224D8D74243BA07E003C72D7 /* LoginViewController.swift */,
+				2283F8C9244F97DB001AAB34 /* utility */,
 				222B0167243B844300D8E664 /* data */,
 				22095E45241FC9BC00BA0B32 /* Simple Surveys.entitlements */,
 				223D155D2404673F00745268 /* AppDelegate.swift */,
@@ -173,6 +180,15 @@
 			);
 			path = "Simple SurveysUITests";
 			sourceTree = "<group>";
+		};
+		2283F8C9244F97DB001AAB34 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				2283F8CA244F97DB001AAB34 /* Constants.swift */,
+			);
+			name = utility;
+			path = "Simple Surveys/utility";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -355,10 +371,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2283F8CC244F997B001AAB34 /* UserRepository.swift in Sources */,
+				2283F8CD244F997B001AAB34 /* SurveyRepository.swift in Sources */,
+				2283F8CE244F997B001AAB34 /* Result.swift in Sources */,
+				2283F8CF244F997B001AAB34 /* DatabaseClient.swift in Sources */,
 				224D8D75243BA07E003C72D7 /* LoginViewController.swift in Sources */,
 				223D15622404673F00745268 /* HomeController.swift in Sources */,
 				223D15622404673F00745268 /* HomeController.swift in Sources */,
 				223D155E2404673F00745268 /* AppDelegate.swift in Sources */,
+				2283F8CB244F97DB001AAB34 /* Constants.swift in Sources */,
 				223D15602404673F00745268 /* SceneDelegate.swift in Sources */,
 				326D0029240EE65100429332 /* RegisterViewController.swift in Sources */,
 			);

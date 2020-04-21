@@ -16,22 +16,22 @@ class UserRepository {
     var mRegisterResult : Result?
     
     
-     func UserRepository(){
+     init(){
         
         let constant : Constants = Constants()
-        //var mDatabaseClient : DatabaseClient = DatabaseClient(url : Constants.API_URL)
-        mDatabaseClient?.api_url = constant.API_URL
+        mDatabaseClient = DatabaseClient(url: constant.API_URL)
         
     }
     
     
     func login (username : String, password : String) {
+        print("login")
         
         let body1:NSMutableDictionary = NSMutableDictionary()
         body1.setValue(username, forKey: "username")
         body1.setValue(password, forKey: "password")
         
-        mDatabaseClient?.queryEndpoint(endpoint: "get/user", body: body1)
+        mDatabaseClient?.queryEndpoint(endpoint: "get-user", body: body1)
         
     }
     

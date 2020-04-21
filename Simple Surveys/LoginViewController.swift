@@ -9,7 +9,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    var userRepository : UserRepository?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,13 +27,19 @@ class LoginViewController: UIViewController {
     
     //Button Outlets
     @IBOutlet var loginButton : UIButton!
+    @IBAction func login(_ sender: UIButton) {
+        print("Click")
+        userRepository = UserRepository()
+         userRepository?.login(username: username.text!, password: password.text!)
+    }
     @IBOutlet var registerButton : UIButton!
-    
+        
     //Buttons
     @IBAction func LoginRequest(_ sender: UIButton) {
-        if (isValidLogin(u: username.text, p: password.text)) {
-            loginButton.setTitle("Logged In", for: .normal)
-        }
+//        if (isValidLogin(u: username.text, p: password.text)) {
+//            loginButton.setTitle("Logged In", for: .normal)
+//        }
+       
         
     }
     @IBAction func SignUpRequest(_ sender : UIButton) {
