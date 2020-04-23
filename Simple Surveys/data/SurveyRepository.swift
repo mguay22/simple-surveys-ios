@@ -11,29 +11,39 @@ import Foundation
 
 class SurveyRepository {
     
-    var mDatabaseClient : DatabaseClient?
+    var mDatabaseClient = DatabaseClient()
+    var question: String?
+    var surveyID: String?
+    var groupCode: String?
+    var userID: String?
     
-    func SurveyRepository(){
+    init(){
         
-        let constant : Constants = Constants()
+        //let constant : Constants = Constants()
         //var mDatabaseClient : DatabaseClient = DatabaseClient(url : Constants.API_URL)
-        mDatabaseClient?.api_url = constant.API_URL
+        //mDatabaseClient.api_url = constant.API_URL
         
     }
     
-    func handleNewSurvey(groupCode : String, userID : Int) {
+    func handleNewSurvey(groupCode : String, userID : String) {
+        
+        self.groupCode = "13"
+        self.userID = "28"
         
         let body1:NSMutableDictionary = NSMutableDictionary()
-        body1.setValue(groupCode, forKey: "group_code")
-        body1.setValue(userID, forKey: "user_id")
+        body1.setValue(self.groupCode, forKey: "group_code")
+        body1.setValue(self.userID, forKey: "user_id")
         
-        mDatabaseClient?.queryEndpoint(endpoint: "get-text-survey", body: body1)
+        mDatabaseClient.queryEndpoint(endpoint: "get-text-survey/", body: body1)
         
+        self.question = mDatabaseClient.question
+        self.surveyID = mDatabaseClient.surveyID
+        //self.surveyID = "25"
         
     }
     
     
-    func postSurveyAnswer(response : String, userID : Int, surveyID : Int, groupCode : String) {
+    func postSurveyAnswer(response : String, userID : String, surveyID : String, groupCode : String) {
         
         let body1:NSMutableDictionary = NSMutableDictionary()
         body1.setValue(userID, forKey: "user_id")
@@ -41,9 +51,17 @@ class SurveyRepository {
         body1.setValue(surveyID, forKey: "survey_id")
         body1.setValue(groupCode, forKey: "group_code")
         
-        mDatabaseClient?.queryEndpoint(endpoint: "post-text-survey", body: body1)
+        mDatabaseClient.queryEndpoint(endpoint: "post-text-survey", body: body1)
         
         
+    }
+    
+    func getQuestion() -> String {
+        return question ?? "Please check back later."
+    }
+    
+    func getSurveyID() -> String{
+        return surveyID ?? "0"
     }
     
 }

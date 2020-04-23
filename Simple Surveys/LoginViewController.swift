@@ -9,7 +9,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    var userRepository = UserRepository()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,15 +31,22 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButton : UIButton!
     @IBOutlet var registerButton : UIButton!
     
+    
+    
     //Buttons
     @IBAction func LoginRequest(_ sender: UIButton) {
+
         if (isValidLogin(u: username.text, p: password.text)) {
             loginButton.setTitle("Logged In", for: .normal)
+            
+            
             self.performSegue(withIdentifier: "SegueFromLoginToHome", sender: self)
             
         } else {
             incorrectLoginLabel.text = "Incorrect username and/or password"
+            password.text = ""
         }
+
         
     }
     @IBAction func SignUpRequest(_ sender : UIButton) {
@@ -51,9 +61,13 @@ class LoginViewController: UIViewController {
             if (p != "" && p != nil) {
                 //hash the password with correct function
                 //Check if the hashed password matches the DB username
-            
+                userRepository.login(username: username.text!, password: password.text!)
                 
+                if (userRepository.getGroupCode() != "0"){
                 return true
+                } else {
+                    return false
+                }
             }
             password.text = ""
             return false

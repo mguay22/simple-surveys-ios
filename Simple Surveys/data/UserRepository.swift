@@ -11,27 +11,32 @@ import Foundation
 
 class UserRepository {
     
-    var mDatabaseClient : DatabaseClient?
+    var mDatabaseClient = DatabaseClient()
     var mLoginResult : Result?
     var mRegisterResult : Result?
     
+    var name: String?
+    var groupCode: String?
+    var userID: String?
     
-     func UserRepository(){
-        
-        let constant : Constants = Constants()
-        //var mDatabaseClient : DatabaseClient = DatabaseClient(url : Constants.API_URL)
-        mDatabaseClient?.api_url = constant.API_URL
+    
+     init(){
         
     }
     
     
     func login (username : String, password : String) {
+        print("login")
         
         let body1:NSMutableDictionary = NSMutableDictionary()
         body1.setValue(username, forKey: "username")
         body1.setValue(password, forKey: "password")
         
-        mDatabaseClient?.queryEndpoint(endpoint: "get/user", body: body1)
+        mDatabaseClient.queryEndpoint(endpoint: "get-user", body: body1)
+        
+        self.name = mDatabaseClient.name
+        self.groupCode = mDatabaseClient.groupCode
+        self.userID = mDatabaseClient.userID
         
     }
     
@@ -53,16 +58,32 @@ class UserRepository {
     }
     
     
-    func register(username : String, password : String, name : String, groupCode : String) {
+    func register(username : String, password : String, email : String, groupCode : String) {
         
         let body1:NSMutableDictionary = NSMutableDictionary()
         body1.setValue(username, forKey: "username")
         body1.setValue(password, forKey: "password")
-        body1.setValue(name, forKey: "name")
+        body1.setValue(email, forKey: "name")
         body1.setValue(groupCode, forKey: "group_code")
         
-        mDatabaseClient?.queryEndpoint(endpoint: "post-user", body: body1)
+        mDatabaseClient.queryEndpoint(endpoint: "post-user", body: body1)
         
+        self.name = username
+        self.groupCode = groupCode
+        
+        
+    }
+    
+    func getGroupCode() -> String {
+        return groupCode ?? "0"
+    }
+    
+    func getName() -> String{
+        return name ?? "Stan Smith"
+    }
+    
+    func getUserID() -> String{
+        return userID ?? "0"
     }
     
 }
