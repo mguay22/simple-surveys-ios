@@ -8,16 +8,17 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var answerTextField: UITextField!
     @IBOutlet var currentQuestion: UILabel!
     @IBOutlet var answerButtom: UIButton!
     @IBOutlet var currentSurvey: UILabel!
     
-    var groupCode: String = "13"
-    var userID: String = "4"
-    let aNetworkRequest = NetworkRequest()
+    var surveyRepo = SurveyRepository()
+    var groupCode : String = ""
+    var userID : String = ""
+    
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         answerTextField.resignFirstResponder()
@@ -32,49 +33,37 @@ class HomeController: UIViewController {
         print(notification)
         // Send POST request to backend to get new survey
         // Update currentQuestion and the submit button
+        //print(userRepo?.getGroupCode())
         
+        surveyRepo.handleNewSurvey(groupCode: groupCode, userID: userID)
         
-        let body:NSMutableDictionary = NSMutableDictionary()
-        
-        body.setValue(self.groupCode, forKey: "group_code")
-        body.setValue(self.userID, forKey: "user_id")
-
-        let end = "get-text-survey/"
-        
-        aNetworkRequest.queryEndpoint(endpoint: end, body: body)
-        
-        let question = aNetworkRequest.getQuestion()
+        //let question = surveyRepo.getQuestion()
+        let question = surveyRepo.question
         
         currentQuestion.text = question
         if (currentQuestion.text == "Please check back later."){
             currentSurvey.text = "No Surveys Available"
+            answerButtom.isHidden = true
+            answerTextField.isHidden = true
         } else {
             currentSurvey.text = "Current Survey"
+            answerButtom.isHidden = false
+            answerTextField.isHidden = false
         }
         
-        
+
     }
     
     @IBAction func submitSurvey(_ sender: UIButton) {
         
-        if (Int(aNetworkRequest.getSurveyID()) != 0) {
-        
-        let body:NSMutableDictionary = NSMutableDictionary()
-        
-        body.setValue(self.groupCode, forKey: "user_id")
-        body.setValue(answerTextField.text, forKey: "response")
-        body.setValue(aNetworkRequest.getSurveyID(), forKey: "survey_id")
-        body.setValue(self.userID, forKey: "group_code")
-
-        let end = "post-text-survey/"
-        
-        aNetworkRequest.queryEndpoint(endpoint: end, body: body)
+        if (surveyRepo.surveyID != "0" && answerTextField.text != "") {
+            
+            surveyRepo.postSurveyAnswer(response: answerTextField.text ?? "", userID: userID, surveyID: surveyRepo.surveyID ?? "0", groupCode: groupCode)
         
         currentSurvey.text = "No Surveys Available"
         currentQuestion.text = "Please check back later."
         answerTextField.text = ""
     }
     }
-    
 }
 

@@ -8,13 +8,17 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
+class LoginViewController: UIViewController, UITextFieldDelegate {
+    
+    var userRepository = UserRepository()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
+   
     //Labels
     @IBOutlet var usernameLabel : UILabel!
     @IBOutlet var passwordLabel : UILabel!
@@ -28,19 +32,36 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButton : UIButton!
     @IBOutlet var registerButton : UIButton!
     
-    //Buttons
-    @IBAction func LoginRequest(_ sender: UIButton) {
+    @IBAction func onDismissKeyboard(_ sender: Any) {
+        username.resignFirstResponder()
+        password.resignFirstResponder()
+   }
+    
+    @IBAction func LoginRequest(_ sender: Any) {
+        print("LoginRequest")
         if (isValidLogin(u: username.text, p: password.text)) {
-            loginButton.setTitle("Logged In", for: .normal)
-            self.performSegue(withIdentifier: "SegueFromLoginToHome", sender: self)
-            
-        } else {
-            incorrectLoginLabel.text = "Incorrect username and/or password"
-        }
-        
+           self.performSegue(withIdentifier: "SegueFromLoginToHome", sender: self)
+       } else {
+           incorrectLoginLabel.text = "Incorrect username and/or password"
+           password.text = ""
+       }
     }
+    
     @IBAction func SignUpRequest(_ sender : UIButton) {
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "SegueFromLoginToHome"?:
+            let homeController = segue.destination as! HomeController
+            print("Seg")
+            print(userRepository.getGroupCode())
+            homeController.groupCode = userRepository.getGroupCode()
+            homeController.userID = userRepository.getUserID()
+        default:
+            return
+        }
     }
     
     func isValidLogin(u : String?, p : String?) -> Bool {
@@ -51,9 +72,13 @@ class LoginViewController: UIViewController {
             if (p != "" && p != nil) {
                 //hash the password with correct function
                 //Check if the hashed password matches the DB username
-            
-                
+                userRepository.login(username: username.text!, password: password.text!)
+                print(userRepository.getGroupCode())
+                if (userRepository.getGroupCode() != "0"){
                 return true
+                } else {
+                    return false
+                }
             }
             password.text = ""
             return false

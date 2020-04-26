@@ -10,5 +10,5 @@ import Foundation
 
 class Constants {
     
-    let API_URL : String = "http://mguay.w3.uvm.edu/simple-surveys/wp-json/simplesurveys/v1/"
+    let API_URL : String = "http://localhost:7888/simple-surveys/wp-json/simplesurveys/v1/"
 }
