@@ -16,9 +16,8 @@ class HomeController: UIViewController {
     @IBOutlet var currentSurvey: UILabel!
     
     var surveyRepo = SurveyRepository()
-    //var userRepo: UserRepository?
-    var groupCode: String = "13"
-    var userID: String = "4"
+    var groupCode : String = ""
+    var userID : String = ""
     
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
@@ -36,7 +35,7 @@ class HomeController: UIViewController {
         // Update currentQuestion and the submit button
         //print(userRepo?.getGroupCode())
         
-        surveyRepo.handleNewSurvey(groupCode: self.groupCode, userID: self.userID)
+        surveyRepo.handleNewSurvey(groupCode: groupCode, userID: userID)
         
         //let question = surveyRepo.getQuestion()
         let question = surveyRepo.question
@@ -44,8 +43,12 @@ class HomeController: UIViewController {
         currentQuestion.text = question
         if (currentQuestion.text == "Please check back later."){
             currentSurvey.text = "No Surveys Available"
+            answerButtom.isHidden = true
+            answerTextField.isHidden = true
         } else {
             currentSurvey.text = "Current Survey"
+            answerButtom.isHidden = false
+            answerTextField.isHidden = false
         }
         
 
@@ -55,7 +58,7 @@ class HomeController: UIViewController {
         
         if (surveyRepo.surveyID != "0" && answerTextField.text != "") {
             
-            surveyRepo.postSurveyAnswer(response: answerTextField.text ?? "", userID: self.userID, surveyID: surveyRepo.surveyID ?? "0", groupCode: self.groupCode)
+            surveyRepo.postSurveyAnswer(response: answerTextField.text ?? "", userID: userID, surveyID: surveyRepo.surveyID ?? "0", groupCode: groupCode)
         
         currentSurvey.text = "No Surveys Available"
         currentQuestion.text = "Please check back later."

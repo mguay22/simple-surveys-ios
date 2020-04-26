@@ -26,13 +26,10 @@ class SurveyRepository {
     }
     
     func handleNewSurvey(groupCode : String, userID : String) {
-        
-        self.groupCode = "13"
-        self.userID = "28"
-        
+                
         let body1:NSMutableDictionary = NSMutableDictionary()
-        body1.setValue(self.groupCode, forKey: "group_code")
-        body1.setValue(self.userID, forKey: "user_id")
+        body1.setValue(groupCode, forKey: "group_code")
+        body1.setValue(userID, forKey: "user_id")
         
         mDatabaseClient.queryEndpoint(endpoint: "get-text-survey/", body: body1)
         

@@ -32,25 +32,31 @@ class LoginViewController: UIViewController {
     @IBOutlet var registerButton : UIButton!
     
     
-    
-    //Buttons
-    @IBAction func LoginRequest(_ sender: UIButton) {
-
+    @IBAction func LoginRequest(_ sender: Any) {
+        print("LoginRequest")
         if (isValidLogin(u: username.text, p: password.text)) {
-            loginButton.setTitle("Logged In", for: .normal)
-            
-            
-            self.performSegue(withIdentifier: "SegueFromLoginToHome", sender: self)
-            
-        } else {
-            incorrectLoginLabel.text = "Incorrect username and/or password"
-            password.text = ""
-        }
-
-        
+           self.performSegue(withIdentifier: "SegueFromLoginToHome", sender: self)
+       } else {
+           incorrectLoginLabel.text = "Incorrect username and/or password"
+           password.text = ""
+       }
     }
+    
     @IBAction func SignUpRequest(_ sender : UIButton) {
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "SegueFromLoginToHome"?:
+            let homeController = segue.destination as! HomeController
+            print("Seg")
+            print(userRepository.getGroupCode())
+            homeController.groupCode = userRepository.getGroupCode()
+            homeController.userID = userRepository.getUserID()
+        default:
+            return
+        }
     }
     
     func isValidLogin(u : String?, p : String?) -> Bool {
@@ -62,7 +68,7 @@ class LoginViewController: UIViewController {
                 //hash the password with correct function
                 //Check if the hashed password matches the DB username
                 userRepository.login(username: username.text!, password: password.text!)
-                
+                print(userRepository.getGroupCode())
                 if (userRepository.getGroupCode() != "0"){
                 return true
                 } else {

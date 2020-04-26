@@ -49,6 +49,7 @@ class DatabaseClient {
 
 
     let fullURL = api_url! + endpoint
+        print(fullURL)
         
     let url = URL(string: fullURL)!
     var request = URLRequest(url: url)
@@ -59,17 +60,20 @@ class DatabaseClient {
     request.httpBody = jsonData
         print(jsonData)
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
-        
+        print("data")
         guard let data = data, error == nil else {
             print(error?.localizedDescription ?? "No data")
             return
         }
         let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
         if let responseJSON = responseJSON {
+            print("res")
+            print(responseJSON)
             
             guard let jsonArray = responseJSON as? [[String: Any]] else {
                 return
             }
+
             
             if (endpoint == "post-text-survey/") {
                 

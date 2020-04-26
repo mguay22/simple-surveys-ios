@@ -65,6 +65,7 @@ class UserRepository {
         body1.setValue(password, forKey: "password")
         body1.setValue(email, forKey: "name")
         body1.setValue(groupCode, forKey: "group_code")
+        print(body1)
         
         mDatabaseClient.queryEndpoint(endpoint: "post-user", body: body1)
         
@@ -75,6 +76,8 @@ class UserRepository {
     }
     
     func getGroupCode() -> String {
+        print("Getting group code")
+        print(groupCode)
         return groupCode ?? "0"
     }
     

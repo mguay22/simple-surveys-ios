@@ -44,7 +44,6 @@ class RegisterViewController: UIViewController {
         if(signUpValid(u : usernameField.text, e : emailField.text, g: groupCodeField.text, p: passwordField.text)) {
             //Sign user up
             //Send email verification
-            signUpButton.setTitle("Signed Up", for: .normal)
             
             userRepo.name = usernameField.text
             
@@ -52,6 +51,17 @@ class RegisterViewController: UIViewController {
         } else {
             usernameField.text = ""
             invalidUsernameLabel.text = "Information missing. Please try again."
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "SegueFromRegisterToHome"?:
+            let homeController = segue.destination as! HomeController
+            homeController.groupCode = userRepo.getGroupCode()
+            homeController.userID = userRepo.getUserID()
+        default:
+            return
         }
     }
     
