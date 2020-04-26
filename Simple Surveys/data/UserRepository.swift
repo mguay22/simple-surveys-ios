@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OneSignal
 
 
 class UserRepository {
@@ -37,6 +38,7 @@ class UserRepository {
         self.name = mDatabaseClient.name
         self.groupCode = mDatabaseClient.groupCode
         self.userID = mDatabaseClient.userID
+        OneSignal.sendTag("groupCode", value: mDatabaseClient.groupCode)
         
     }
     
@@ -71,6 +73,7 @@ class UserRepository {
         
         self.name = username
         self.groupCode = groupCode
+        OneSignal.sendTag("groupCode", value: groupCode)
         
         
     }

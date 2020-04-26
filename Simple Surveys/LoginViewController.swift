@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     var userRepository = UserRepository()
     
@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+   
     //Labels
     @IBOutlet var usernameLabel : UILabel!
     @IBOutlet var passwordLabel : UILabel!
@@ -31,6 +32,10 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButton : UIButton!
     @IBOutlet var registerButton : UIButton!
     
+    @IBAction func onDismissKeyboard(_ sender: Any) {
+        username.resignFirstResponder()
+        password.resignFirstResponder()
+   }
     
     @IBAction func LoginRequest(_ sender: Any) {
         print("LoginRequest")

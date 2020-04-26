@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var answerTextField: UITextField!
     @IBOutlet var currentQuestion: UILabel!
